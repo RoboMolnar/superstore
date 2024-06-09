@@ -1,0 +1,294 @@
+{
+  "Customers": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1a"},
+      "first_name": "Chris",
+      "last_name": "Hemsworth",
+      "age": 39,
+      "gender": "Male",
+      "email": "chris.hemsworth@hollywood.com",
+      "phone": "555-1111",
+      "fax": "555-2222",
+      "address": {
+        "street": "123 Hollywood Blvd",
+        "postal_code": "90028",
+        "city": "Los Angeles",
+        "region": {
+          "region_name": "California",
+          "state": {
+            "state_name": "CA"
+          }
+        }
+      }
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1b"},
+      "first_name": "Scarlett",
+      "last_name": "Johansson",
+      "age": 38,
+      "gender": "Female",
+      "email": "scarlett.johansson@hollywood.com",
+      "phone": "555-3333",
+      "fax": "555-4444",
+      "address": {
+        "street": "456 Movie Star Lane",
+        "postal_code": "90210",
+        "city": "Beverly Hills",
+        "region": {
+          "region_name": "California",
+          "state": {
+            "state_name": "CA"
+          }
+        }
+      }
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1c"},
+      "first_name": "Robert",
+      "last_name": "Downey Jr.",
+      "age": 58,
+      "gender": "Male",
+      "email": "robert.downey@hollywood.com",
+      "phone": "555-5555",
+      "fax": "555-6666",
+      "address": {
+        "street": "789 Iron Man Rd",
+        "postal_code": "90024",
+        "city": "Los Angeles",
+        "region": {
+          "region_name": "California",
+          "state": {
+            "state_name": "CA"
+          }
+        }
+      }
+    }
+  ],
+  "Orders": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1c"},
+      "orderDate": {"$date": "2023-05-01T00:00:00Z"},
+      "shipDate": {"$date": "2023-05-03T00:00:00Z"},
+      "customer_id": {"$oid": "60d82b3f9e2c3d7e88f71a1a"},
+      "orderDetails": [
+        {
+          "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1d"},
+          "quantity": 2,
+          "total": 300.00,
+          "discount": 30.00,
+          "profit": 60.00
+        }
+      ],
+      "segment": "Consumer",
+      "shipMode": "Second Class"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1e"},
+      "orderDate": {"$date": "2023-06-02T00:00:00Z"},
+      "shipDate": {"$date": "2023-06-04T00:00:00Z"},
+      "customer_id": {"$oid": "60d82b3f9e2c3d7e88f71a1b"},
+      "orderDetails": [
+        {
+          "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1f"},
+          "quantity": 1,
+          "total": 2000.00,
+          "discount": 200.00,
+          "profit": 400.00
+        }
+      ],
+      "segment": "Corporate",
+      "shipMode": "First Class"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1f"},
+      "orderDate": {"$date": "2023-07-01T00:00:00Z"},
+      "shipDate": {"$date": "2023-07-03T00:00:00Z"},
+      "customer_id": {"$oid": "60d82b3f9e2c3d7e88f71a1c"},
+      "orderDetails": [
+        {
+          "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1d"},
+          "quantity": 3,
+          "total": 450.00,
+          "discount": 45.00,
+          "profit": 90.00
+        }
+      ],
+      "segment": "Consumer",
+      "shipMode": "Second Class"
+    }
+  ],
+  "Products": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1d"},
+      "product_name": "Thor's Hammer",
+      "supplier_id": {"$oid": "60d82b3f9e2c3d7e88f71a20"},
+      "category": {
+        "category_name": "Weapons",
+        "subCategory": {
+          "subCategory_name": "Mythical"
+        }
+      },
+      "unit_price": 150.00,
+      "units_in_stock": 15
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a1f"},
+      "product_name": "Black Widow Suit",
+      "supplier_id": {"$oid": "60d82b3f9e2c3d7e88f71a20"},
+      "category": {
+        "category_name": "Costumes",
+        "subCategory": {
+          "subCategory_name": "Stealth Suits"
+        }
+      },
+      "unit_price": 2000.00,
+      "units_in_stock": 8
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a20"},
+      "product_name": "Iron Man Armor",
+      "supplier_id": {"$oid": "60d82b3f9e2c3d7e88f71a20"},
+      "category": {
+        "category_name": "Costumes",
+        "subCategory": {
+          "subCategory_name": "Armored Suits"
+        }
+      },
+      "unit_price": 5000.00,
+      "units_in_stock": 5
+    }
+  ],
+  "Reviews": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a21"},
+      "customer_id": {"$oid": "60d82b3f9e2c3d7e88f71a1a"},
+      "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1d"},
+      "rating": 4.5,
+      "review_text": "Great hammer, very powerful!",
+      "review_date": {"$date": "2023-05-05T00:00:00Z"}
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a22"},
+      "customer_id": {"$oid": "60d82b3f9e2c3d7e88f71a1b"},
+      "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1f"},
+      "rating": 4.7,
+      "review_text": "Excellent suit, very stealthy!",
+      "review_date": {"$date": "2023-06-06T00:00:00Z"}
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a23"},
+      "customer_id": {"$oid": "60d82b3f9e2c3d7e88f71a1c"},
+      "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1d"},
+      "rating": 5.0,
+      "review_text": "The hammer is amazing, worth every penny!",
+      "review_date": {"$date": "2023-07-05T00:00:00Z"}
+    }
+  ],
+  "Suppliers": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a20"},
+      "company_name": "Hero Supplies Inc.",
+      "phone": "555-5555",
+      "email": "contact@herosupplies.com",
+      "fax": "555-6666"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a21"},
+      "company_name": "Stark Industries",
+      "phone": "555-7777",
+      "email": "info@starkindustries.com",
+      "fax": "555-8888"
+    }
+  ],
+  "Categories": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a23"},
+      "category_name": "Weapons",
+      "category_description": "Weapons for heroes."
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a24"},
+      "category_name": "Costumes",
+      "category_description": "Outfits for heroes."
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a25"},
+      "category_name": "Gadgets",
+      "category_description": "Gadgets for heroes."
+    }
+  ],
+  "SubCategories": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a25"},
+      "category_id": {"$oid": "60d82b3f9e2c3d7e88f71a23"},
+      "subCategory_name": "Mythical",
+      "subCategory_description": "Mythical weapons."
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a26"},
+      "category_id": {"$oid": "60d82b3f9e2c3d7e88f71a24"},
+      "subCategory_name": "Stealth Suits",
+      "subCategory_description": "Suits designed for stealth."
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a27"},
+      "category_id": {"$oid": "60d82b3f9e2c3d7e88f71a25"},
+      "subCategory_name": "Armored Suits",
+      "subCategory_description": "Armored suits for heroes."
+    }
+  ],
+  "Segments": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a27"},
+      "description": "Consumer"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a28"},
+      "description": "Corporate"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a29"},
+      "description": "VIP"
+    }
+  ],
+  "ShipModes": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a29"},
+      "description": "First Class"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a2a"},
+      "description": "Second Class"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a2b"},
+      "description": "Overnight"
+    }
+  ],
+  "Stocks": [
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a2b"},
+      "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1d"},
+      "quantity_available": 15,
+      "reorder_level": 5,
+      "reorder_quantity": 10,
+      "warehouse_location": "C1"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a2c"},
+      "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a1f"},
+      "quantity_available": 8,
+      "reorder_level": 3,
+      "reorder_quantity": 5,
+      "warehouse_location": "D2"
+    },
+    {
+      "_id": {"$oid": "60d82b3f9e2c3d7e88f71a2d"},
+      "product_id": {"$oid": "60d82b3f9e2c3d7e88f71a20"},
+      "quantity_available": 5,
+      "reorder_level": 2,
+      "reorder_quantity": 3,
+      "warehouse_location": "E3"
+    }
+  ]
+}
